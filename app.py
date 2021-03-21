@@ -11,6 +11,9 @@ model=pickle.load(open('trainedResult.pkl','rb'))
 def hello_world():
     return render_template('mainPage.html')
 
+@app.route('/heartdisease')
+def renderHeart():
+    return render_template('heartdisease.html')
 
 @app.route('/predict',methods=['POST','GET'])
 def predict():
@@ -18,11 +21,11 @@ def predict():
     predicted=model.predict([int_features])
 
     if predicted == 0:
-        return render_template('mainPage.html',pred='From your test result you do not have heart disease indication')
+        return render_template('heartdisease.html',pred='From your test result, you do not have heart disease indication')
     elif predicted == 1:
-        return render_template('mainPage.html',pred='From your test result you have strong indicaton of having heart disease.')
+        return render_template('heartdisease.html',pred='From your test result, you have strong indicaton of heart disease.')
     else:
-        return(render_template('mainPage.html',pred=''))
+        return(render_template('heartdisease.html',pred=''))
 
 if __name__ == '__main__':
     app.run(debug=True)

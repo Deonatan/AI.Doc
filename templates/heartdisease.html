@@ -46,21 +46,27 @@
 </nav>
 <body>
   <div class = 'main'>
-    <div class = 'categories'>
-      <figure class = 'gap'>
-        <a href = '/heartdisease'>
-        <img src="static/heartDisease.jpg" class="img-fill">
-      </a>
-        <figcaption>Heart Disease Screening</figcaption>
-    </figure>
-    <figure>
-        <img src="static/cancer.jfif" class="img-fill">
-        <figcaption>Cancer Screening</figcaption>
-    </figure>
-    <figure>
-      <img src="static/stroke.gif" class="img-fill">
-      <figcaption>Stroke Screening</figcaption>
-  </figure>
-  </div>
+    <form action='/predict' method="post" class="col s12">
+      <label for="first_name"><b>Input</b></label>
+      <br>
+    </div>
+      <div class="form-row">
+        <div class="input-field">
+          <input placeholder="Age (years old)" name="age" type="text" class="validate gap col">
+          <input placeholder="Weight (Kg)" name="weight" type="text" class="validate gap col">
+          <input placeholder="Height (cm)" name="height" type="text" class="validate gap col">
+          <input placeholder="Systolic BP (mmhg)" name="ap_hi" type="text" class="validate gap col">
+          <input placeholder="Diastolic BP (mmhg)" name="ap_lo" type="text" class="validate gap col">
+          <input placeholder="Smoke (y/n)" name="smoke" type="text" class="validate gap col">
+          <input placeholder="cholesterol" name="cholesterol" type="text" class="validate gap col">
+          <input placeholder="glucose" name="glucose" type="text" class="validate gap col">
+          <input placeholder="alcohol" name="alcohol" type="text" class="validate gap col">
+          <input placeholder="gender" name="gender" type="text" class="validate gap col">
+          <input placeholder="physical" name="physical" type="text" class="validate gap col">
+      </div>
+      </div>
+        <button type="submit" class="btn btn-outline-dark">Predict</button>
+    </form>
+    {{pred}}
 </body>
 </html>
