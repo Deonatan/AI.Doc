@@ -8,7 +8,7 @@ model=pickle.load(open('trainedResult.pkl','rb'))
 
 
 @app.route('/')
-def hello_world():
+def mainPageTemplate():
     return render_template('mainPage.html')
 
 @app.route('/heartdisease')
