@@ -15,6 +15,13 @@
     background-color:#0b0633;
     color:#0b0633;
 }
-.imsize{
-    size: 10px;
+.navbar-brand {
+    width:150px;
+    font-size: 24px;
 }
+.navbar-brand img {
+    height: 50px;
+    /* put value of image height as your need */
+    float: left;
+    margin-right: 7px;
+  }
