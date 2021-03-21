@@ -49,7 +49,6 @@
     <form action='/predict' method="post" class="col s12">
       <label for="first_name"><b>Input</b></label>
       <br>
-    </div>
       <div class="form-row">
         <div class="input-field">
           <input placeholder="Age (years old)" name="age" type="text" class="validate gap col">
@@ -65,8 +64,10 @@
           <input placeholder="physical activity" name="physical" type="text" class="validate gap col">
       </div>
       </div>
-        <button type="submit" class="btn btn-outline-dark">Predict</button>
     </form>
+    <button type="submit" class="btn btn-outline-dark">Predict</button>
     {{pred}}
+  </div>
+
 </body>
 </html>
