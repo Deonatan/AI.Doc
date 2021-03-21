@@ -1,0 +1,20 @@
+.main{
+    padding-left:30px;
+    padding-right:10px;
+}
+
+.btn{
+    margin-top:10px;
+}
+.gap{
+    margin-top:30px;
+    margin-left:auto;
+    margin-right: auto;
+}
+.navbar-custom{
+    background-color:#0b0633;
+    color:#0b0633;
+}
+.imsize{
+    size: 10px;
+}
