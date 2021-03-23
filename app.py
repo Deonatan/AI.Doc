@@ -25,7 +25,9 @@ def predict():
     elif predicted == 1:
         return render_template('heartdisease.html',pred='From your test result, you have strong indicaton of heart disease.')
     else:
-        return(render_template('heartdisease.html',pred=''))
+        return(render_template('heartdisease.html',pred='no result found'))
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
